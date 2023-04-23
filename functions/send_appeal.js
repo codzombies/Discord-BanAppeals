@@ -55,7 +55,7 @@ exports.handler = async function (event, context) {
             description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
             author: {
                 name: unbanInfo.username,
-                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png"
+                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "http://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo.png"
             },
             fields: [],
             timestamp: new Date().toISOString()
