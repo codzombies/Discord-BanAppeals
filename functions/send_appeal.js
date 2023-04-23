@@ -54,8 +54,8 @@ exports.handler = async function (event, context) {
             color: 0xff0000,
             title: "Ban Appeal Received",
             description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
-	        thumbnail: {
-		          url: 'http://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo_black.png',
+	    thumbnail: {
+		url: 'http://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo_black.png',
             author: {
                 name: unbanInfo.username,
                 icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "http://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo.png"
