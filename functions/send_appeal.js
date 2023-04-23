@@ -51,12 +51,11 @@ exports.handler = async function (event, context) {
     var appeal_channel_id = process.env.APPEALS_CHANNEL;
     var body = {
         embed: {
-            color: 0xff0000,
-            title: "Ban Appeal Received",
-            description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})\n⠀`,
+            title: "New Ban Appeal Received",
+            description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
             author: {
                 name: unbanInfo.username,
-                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "http://cdn.zombiesdiscord.com/prod/zombies/media/server_icon.gif"
+                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png"
             },
             fields: [],
             timestamp: new Date().toISOString()
@@ -65,21 +64,21 @@ exports.handler = async function (event, context) {
     for (let i = 0; i < data.form.length; i++) {
         let question = data.form[i].question;
         let answer = data.form[i].answer.slice(0, MAX_EMBED_FIELD_CHARS);
-        body.embed.fields.push({name: `**${question}**`, value: answer\n⠀, inline: false});
+        body.embed.fields.push({name: `**${question}**`, value: answer, inline: false});
     }
     body.components = [{
         type: 1,
         components: [
             {
                 type: 2,
-                style: 3,
-                label: "Approve",
+                style: 5,
+                label: "Approve and Unban",
                 url: `${data.unban_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
             {
                 type: 2,
-                style: 4,
-                label: "Deny",
+                style: 5,
+                label: "Deny and Block",
                 url: `${data.deny_and_block_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
         ]
