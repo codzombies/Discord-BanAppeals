@@ -73,14 +73,14 @@ exports.handler = async function (event, context) {
             {
                 type: 2,
                 style: 5,
-                emoji: "<:perk_WhosWho:816517792994951228>",
+                emoji: ":white_check_mark:",
                 label: "Approve and Unban",
                 url: `${data.unban_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
             {
                 type: 2,
                 style: 5,
-                emoji: "<:perk_Blood_Wolf_Bite:894971126642532373>",
+                emoji: ":red_square:",
                 label: "Deny and Block",
                 url: `${data.deny_and_block_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
