@@ -51,11 +51,12 @@ exports.handler = async function (event, context) {
     var appeal_channel_id = process.env.APPEALS_CHANNEL;
     var body = {
         embed: {
-            title: "New Ban Appeal Received",
-            description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
+            color: 0xFF0000
+            title: "Ban Appeal Received",
+            description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})\n⠀`,
             author: {
                 name: unbanInfo.username,
-                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "https://discordapp.com/assets/322c936a8c8be1b803cd94861bdfa868.png"
+                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "http://cdn.zombiesdiscord.com/prod/zombies/media/server_icon.gif"
             },
             fields: [],
             timestamp: new Date().toISOString()
@@ -64,21 +65,23 @@ exports.handler = async function (event, context) {
     for (let i = 0; i < data.form.length; i++) {
         let question = data.form[i].question;
         let answer = data.form[i].answer.slice(0, MAX_EMBED_FIELD_CHARS);
-        body.embed.fields.push({name: `**${question}**`, value: answer, inline: false});
+        body.embed.fields.push({name: `**${question}**`, value: answer\n⠀, inline: false});
     }
     body.components = [{
         type: 1,
         components: [
             {
                 type: 2,
-                style: 5,
-                label: "Approve and Unban",
+                style: 3,
+                emoji: ✅,
+                label: "Approve",
                 url: `${data.unban_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
             {
                 type: 2,
-                style: 5,
-                label: "Deny and Block",
+                style: 4,
+                emoji: 🟥,
+                label: "Deny",
                 url: `${data.deny_and_block_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
         ]
