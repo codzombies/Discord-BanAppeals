@@ -1,5 +1,9 @@
 [
   {
+    "question": "You understand to submit only one ban appeal, any more result in automatic denial.",
+    "character_limit": 5
+  }, {
+  {
     "question": "Why were you banned?",
     "character_limit": 1024
   }, {
