@@ -73,15 +73,13 @@ exports.handler = async function (event, context) {
             {
                 type: 2,
                 style: 5,
-                emoji: ":white_check_mark:",
-                label: "Approve and Unban",
+                label: "Approve",
                 url: `${data.unban_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
             {
                 type: 2,
                 style: 5,
-                emoji: ":red_square:",
-                label: "Deny and Block",
+                label: "Deny",
                 url: `${data.deny_and_block_url}?token=${encodeURIComponent(event.headers.authorization)}`
             },
         ]
