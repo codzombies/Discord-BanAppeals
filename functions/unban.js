@@ -8,14 +8,21 @@ async function sendUnbanEmail(usersInfo, url) {
     const html = `
       <div> 
          Hi ${usersInfo.username}#${usersInfo.user_discriminator}! <br>
-         Your ban appeal request submitted on ${url} has been approved!<br>
-         You are now able to rejoin us using this invite ${process.env.INVITE_URL}
+         Good news! Your ban appeal request submitted via ${url} has been approved! <br>
+         
+         We invite you to start on a clean slate. Ensure you read our rules and channel descriptions when returning. <br>
+         You may view our full rules via our docs: https://docs.zombiesdiscord.com/server-information/server-rules <br>
+         
+         You are now able to rejoin us using this invite ${process.env.INVITE_URL} <br>
+         
+         Thank you, <br>
+         Z-Staff
       </div>
     `;
     const mail = {
         from: process.env.SENDGRID_SENDER_EMAIL,
         to: usersInfo.email,
-        subject: "Your Ban Appeal Was Approved!",
+        subject: "Ban Appeal Approved!",
         html,
     };
     await sendGridMail.send(mail);
@@ -36,7 +43,7 @@ exports.handler = async function (event, context) {
                 // let guild = await getGuildInfo(process.env.REACT_APP_GUILD_ID);
                 let response = await unbanUser(unbanInfo.user_id, process.env.REACT_APP_GUILD_ID);
                 if (response.response && response.response.data.code === 10026) {
-                    throw new Error("User is not actually banned")
+                    throw new Error("User is not banned")
                 }
                 let success_message = "This ban appeal has been approved and the user has been unbanned from your server"
                 if (process.env.REACT_APP_ENABLE_SENDGRID) {
