@@ -10,19 +10,18 @@ async function sendUnbanEmail(usersInfo, url) {
          Hi ${usersInfo.username}#${usersInfo.user_discriminator}! <br>
          Good news! Your ban appeal request submitted via ${url} has been approved! <br>
          
-         We invite you to start on a clean slate. Ensure you read our rules and channel descriptions when returning. <br>
-         You may view our full rules via our docs: https://docs.zombiesdiscord.com/server-information/server-rules <br>
-         
+         We invite you to start on a clean slate. Ensure you read our rules and channel descriptions upon returning. <br>
+                 
          You are now able to rejoin us using this invite ${process.env.INVITE_URL} <br>
          
          Thank you, <br>
-         Z-Staff
+         Call of Duty Zombies Discord Staff
       </div>
     `;
     const mail = {
         from: process.env.SENDGRID_SENDER_EMAIL,
         to: usersInfo.email,
-        subject: "Ban Appeal Approved!",
+        subject: "Your Call of Duty Zombies Discord Ban Appeal",
         html,
     };
     await sendGridMail.send(mail);
