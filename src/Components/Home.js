@@ -6,6 +6,8 @@ import { mdiDiscord } from '@mdi/js';
 import Icon from "@mdi/react";
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 const crypto = require('crypto');
 
@@ -17,22 +19,25 @@ class Home extends Component {
         });
 
         return (
-            <Grid container alignItems={"center"} justify="center" direction="column">
+            <Grid container alignItems={"center"} justify="center" direction="column" spacing={3}>
                 <Grid item xs={12}>
                     <Button startIcon={<Icon size={1} path={mdiDiscord}/>} href={url} size={"large"} className={"button"}>Login with Discord</Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
-                        <Typography variant="h5" component="h2" gutterBottom>
-                            Appealing your Call of Duty Zombies Discord Ban
-                        </Typography>
-                        <Typography variant="body1" component="p">
-                            This website provides you the ability to appeal your Call of Duty Zombies Discord ban. Sign in through Discord using the button above 
-                            and fill out the questions to the best of your ability. If your appeal is accepted, you will receive a response through your Discord account's email inbox in the near future. 
-                            You will not receive any response if your appeal is denied. If you are unsure about the reason for your ban, please refer to the Call of Duty Zombies#5103 Discord Bot under the
-                            reason field for your ban reason.
-                        </Typography>
-                    </Box>
+                    <Card style={{ maxWidth: 600 }}>
+                        <CardContent>
+                            <Typography variant="h5" component="h2" align="center" gutterBottom>
+                                Appeal a Call of Duty Zombies Discord Ban
+                            </Typography>
+                            <Typography variant="body1" component="p" align="center">
+                                This website lets you appeal your Call of Duty Zombies Discord ban. 
+                                Sign in through Discord using the button above and complete the questions to the best of your ability. 
+                                If your appeal is accepted, you will get a response via your Discord account's email. 
+                                You won't receive a response if your appeal is denied. 
+                                If you're unsure about the reason for your ban, check your direct messages with the Call of Duty Zombies#5103 Discord Bot where it is located in the reason field.
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
         );
