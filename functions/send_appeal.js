@@ -56,7 +56,7 @@ exports.handler = async function (event, context) {
             description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
             author: {
                 name: unbanInfo.username,
-                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "http://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo_black.png"
+                icon_url: unbanInfo.avatar_url ? unbanInfo.avatar_url : "https://cdn.zombiesdiscord.com/prod/zombies/media/gfx/server_logo_black.png"
             },
             fields: [],
             timestamp: new Date().toISOString()
@@ -108,7 +108,7 @@ exports.handler = async function (event, context) {
                 statusCode: 500,
                 body: JSON.stringify({
                     success: false,
-                    error: "Failed to post message to appeals channel using bot token. Please contact and admin or open a ticket here https://github.com/jcsumlin/discord-ban-appeal/issues/new?template=bug_report.md",
+                    error: "Failed to post message to appeals channel using bot token. Please contact Eternalll through Modmail",
                 })
             };
         })
