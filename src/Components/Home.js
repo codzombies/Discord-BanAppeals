@@ -23,7 +23,7 @@ class Home extends Component {
                     <Button startIcon={<Icon size={1} path={mdiDiscord}/>} href={url} size={"large"} className={"button"}>Login with Discord</Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Card style={{ maxWidth: 600 }}>
+                    <Card style={{ maxWidth: 600, backgroundColor: 'inherit', border: '2px solid darkgrey' }}>
                         <CardContent>
                             <Typography variant="h5" component="h2" align="center" gutterBottom>
                                 Appeal a Call of Duty Zombies Discord Ban
