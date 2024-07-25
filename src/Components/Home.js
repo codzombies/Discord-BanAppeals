@@ -55,7 +55,7 @@ class Home extends Component {
                                 What Is The Reason For A Denied Appeal?
                             </Typography>
                             <Typography variant="body1" component="p" align="center">
-                                There are several reasons an appeal will be denied. Most notably, your ban reason containing "❌ Your ban is permanent and an appeal will not be considered.". 
+                                There are several reasons an appeal will be denied. Most notably, your ban reason containing "Your ban is permanent and an appeal will not be considered.". 
                                 Furthermore, appeals containing lies, insults, or the submission of more than one appeal will also result in your appeal being denied. 
                                 Finally, if your ban was for piracy, malicious cheating, or a Discord Terms of Service violation, your appeal cannot be accepted to protect our community.
                             </Typography>
