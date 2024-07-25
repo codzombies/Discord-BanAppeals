@@ -28,14 +28,36 @@ class Home extends Component {
                     <Grid item xs={12}>
                         <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
                             <Typography variant="h5" component="h2" align="center" gutterBottom>
-                                Appeal a Call of Duty Zombies Discord Ban
+                                How To Appeal My Discord Ban?
                             </Typography>
                             <Typography variant="body1" component="p" align="center">
-                                This website lets you appeal your Call of Duty Zombies Discord ban.
-                                Sign in through Discord using the button above and complete the questions to the best of your ability.
-                                If your appeal is accepted, you will get a response via your Discord account's email.
-                                You will not receive a response if your appeal is denied.
-                                If you're unsure about the reason for your ban, check your direct messages with the Call of Duty Zombies#5103 Discord Bot where it is located in the reason field.
+                                Sign in through Discord using the button above and complete the questions to the best of your ability. 
+                                If you're unsure about the reason for your ban, check your direct messages with the Call of Duty Zombies#5103 Discord Bot where it is located in the reason field. 
+                                Providing an incorrect or false reason for your ban will result in the appeal being denied.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
+                            <Typography variant="h5" component="h2" align="center" gutterBottom>
+                                How Do I Know My Appeal Was Accepted?
+                            </Typography>
+                            <Typography variant="body1" component="p" align="center">
+                                When logging in through Discord, the email of that account is temporarily stored through our integration. 
+                                If your appeal is accepted, you will receive an email from our domain (@zombiesdiscord.com) notifying you of a successful appeal. 
+                                For appeals that are denied, you will not receive any response and will be unable to make another appeal.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
+                            <Typography variant="h5" component="h2" align="center" gutterBottom>
+                                What Is The Reason For A Denied Appeal?
+                            </Typography>
+                            <Typography variant="body1" component="p" align="center">
+                                There are several reasons an appeal will be denied. Most notably, your ban reason containing "❌ Your ban is permanent and an appeal will not be considered.". 
+                                Furthermore, appeals containing lies, insults, or the submission of more than one appeal will also result in your appeal being denied. 
+                                Finally, if your ban was for piracy, malicious cheating, or a Discord Terms of Service violation, your appeal cannot be accepted to protect our community.
                             </Typography>
                         </Box>
                     </Grid>
