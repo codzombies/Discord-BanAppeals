@@ -108,7 +108,7 @@ exports.handler = async function (event, context) {
                 statusCode: 500,
                 body: JSON.stringify({
                     success: false,
-                    error: "Failed to post message to appeals channel using bot token. Please contact Eternalll through Modmail",
+                    error: "Failed to post message to appeals channel using bot token. Please email devops@zombiesdiscord.com with a screenshot of this error message.",
                 })
             };
         })
