@@ -15,13 +15,13 @@ async function sendUnbanEmail(usersInfo, url) {
          You are now able to rejoin us using this invite ${process.env.INVITE_URL} <br>
          
          Thank you, <br>
-         Call of Duty Zombies Discord Staff
+         Call of Duty Zombies/Multiplayer Discord Staff
       </div>
     `;
     const mail = {
         from: process.env.SENDGRID_SENDER_EMAIL,
         to: usersInfo.email,
-        subject: "Your Call of Duty Zombies Discord Ban Appeal",
+        subject: "Your Call of Duty Zombies/Multiplayer Discord Ban Appeal",
         html,
     };
     await sendGridMail.send(mail);
