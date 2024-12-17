@@ -28,6 +28,19 @@ class Home extends Component {
                     <Grid item xs={12}>
                         <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
                             <Typography variant="h5" component="h2" align="center" gutterBottom>
+                                I was banned from  the Multiplayer Server?
+                            </Typography>
+                            <Typography variant="body1" component="p" align="center">
+                                Bans between the Call of Duty Zombies and Call of Duty Multiplayer server are synced. If you are banned from one server, you are banned from the other. 
+                                This also means that if you are unbanned from one server, you are unbanned from the other. Therefore, there is no reason to have two separate ban appeal systems. 
+                                Please submit your appeal as normal no matter which server you were banned from.
+                            </Typography>
+                        </Box>
+                    </Grid>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
+                            <Typography variant="h5" component="h2" align="center" gutterBottom>
                                 How To Appeal My Discord Ban?
                             </Typography>
                             <Typography variant="body1" component="p" align="center">
