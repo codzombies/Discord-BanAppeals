@@ -2,6 +2,9 @@
   { "question": "You understand to submit only one ban appeal, any more result in automatic denial.",
     "character_limit": 5
   }, {
+    "question": "Which server were you banned from? (Call of Duty Zombies or Call of Duty Multiplayer)",
+    "character_limit": 24
+  },{
     "question": "Why were you banned?",
     "character_limit": 1024
   }, {
