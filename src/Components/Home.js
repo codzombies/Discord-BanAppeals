@@ -37,7 +37,6 @@ class Home extends Component {
                             </Typography>
                         </Box>
                     </Grid>
-                    </Grid>
                     <Grid item xs={12}>
                         <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
                             <Typography variant="h5" component="h2" align="center" gutterBottom>
