@@ -51,7 +51,7 @@ exports.handler = async function (event, context) {
     var appeal_channel_id = process.env.APPEALS_CHANNEL;
     var body = {
         embed: {
-            color: 0xff0000,
+            color: 0xff6723,
             title: "Ban Appeal Received",
             description: `**Username**: <@${unbanInfo.user_id}> (${unbanInfo.username}#${unbanInfo.user_discriminator})`,
             author: {
@@ -108,7 +108,7 @@ exports.handler = async function (event, context) {
                 statusCode: 500,
                 body: JSON.stringify({
                     success: false,
-                    error: "Failed to post message to appeals channel using bot token. Please email devops@zombiesdiscord.com with a screenshot of this error message.",
+                    error: "Failed to post message to appeals channel using bot token. Please email devops (@) zombiesdiscord (dot) com with a screenshot of this error message.",
                 })
             };
         })
