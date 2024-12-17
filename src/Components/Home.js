@@ -28,7 +28,7 @@ class Home extends Component {
                     <Grid item xs={12}>
                         <Box mt={2} p={2} border={1} borderRadius={8} borderColor="grey.300">
                             <Typography variant="h5" component="h2" align="center" gutterBottom>
-                                I was banned from  the Multiplayer Server?
+                                I was banned from the Multiplayer Server?
                             </Typography>
                             <Typography variant="body1" component="p" align="center">
                                 Bans between the Call of Duty Zombies and Call of Duty Multiplayer server are synced. If you are banned from one server, you are banned from the other. 
