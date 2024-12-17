@@ -131,13 +131,13 @@ class Form extends Component {
         if (this.state.notBanned) {
             return <Redirect to={{
                 pathname: '/404',
-                state: {errorCode: '403', errorMessage: "It looks like you're not banned... yet..."}
+                state: {errorCode: '403', errorMessage: "Your account is not banned from the server."}
             }}/>;
         }
         if (this.state.blocked) {
             return <Redirect to={{
                 pathname: '/404',
-                state: {errorCode: '403', errorMessage: "You have been blocked from submitting further ban appeals"}
+                state: {errorCode: '403', errorMessage: "Your appeal was denied and you have been blocked from submitting further ban appeals."}
             }}/>;
         }
 
